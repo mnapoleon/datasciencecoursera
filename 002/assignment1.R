@@ -4,5 +4,5 @@ pollutantmean <- function(directory, pollutant, id = 1:332) {
   for (i in id) {
     data <- rbind(data, read.csv(all_files[i]))
   }
-  poll_data <- data[poll]
+  colMeans(data[pollutant], na.rm=TRUE)
 }
